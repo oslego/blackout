@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackout - CSS Masking</title>
+  <style>
+    body{
+      font-size: 20px;
+      width: 60rem;
+      margin: 0 auto;
+      height: 100vh;
+    }
+
+    h1 em{
+      font-size: 0.45em;
+      letter-spacing: 0;
+      display: block;
+      margin-top: 1em;
+    }
+
+    h1{
+      width: 100%;
+      text-align: center;
+      margin: 1em 0 1em;
+      font-size: 2.5em;
+      letter-spacing: -3px;
+    }
+
+    h1, article{
+      font-family: Palatino, Georgia, Times, sans-serif;
+    }
+
+    article{
+      padding: 1em 3em;
+      box-sizing: border-box;
+      height: 100%;
+      font-size: 1em;
+      line-height: 1.6em;
+      color: #333;
+/*      background: rgb(250, 241, 228);*/
+    }
+
+    article span{
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+      background-repeat: no-repeat;
+      background-size: 0 1em;
+      transition: background-size 1.3s ease-in-out;
+    }
+
+    article:hover span{
+      background-size: 64em 1em;
+    }
+
+  </style>
+</head>
+<body>
+  <article>
+  <h1>
+    Hidden in Plain Sight
+    <em>hover to uncover secrets</em>
+  </h1>
+  <p>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing </span><span>elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad</span> can <span>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</span> masks <span>velit esse cillum dolore eu fugiat nulla pariatur.</span><span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit </span><span>anim id est laborum. </span><span>Lorem ipsum dolor sit amet, consectetur</span> reveal <span>adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</span> more <span>ut aliquip ex ea commodo consequat. Duis aute irure dolor in</span><span>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</span><span> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+  </p>
+  <p>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span><span> tempor incididunt ut labore et dolore magna aliqua. Ut</span> than <span>enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</span> they <span>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span><span>Excepteur sint occaecat cupidatat non proident</span> hide? <span>Sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+  </p>
+  </article>
+</body>
+</html>
